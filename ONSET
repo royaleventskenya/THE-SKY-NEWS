@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky News Mockup</title>
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #0078D4;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 24px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    #home {
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    #blog .blog-posts, #magazines .magazines {
+      display: flex;
+      gap: 20px;
+    }
+
+    .post, .magazine {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      width: 250px;
+    }
+
+    button {
+      background-color: #0078D4;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005a9c;
+    }
+
+    .social-icons a {
+      margin-right: 15px;
+      text-decoration: none;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    #login {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+    }
+
+    #close-login {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Sky News</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#magazines">Magazines</a></li>
+        <li><a href="#login" id="login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to Sky News</h1>
+    <p>Your source for breaking news, in-depth articles, and premium content.</p>
+  </section>
+
+  <section id="blog">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-posts">
+      <div class="post">
+        <h3>Breaking News: Major Event</h3>
+        <p>Stay updated on the latest events happening worldwide. Click to read more...</p>
+      </div>
+      <div class="post">
+        <h3>Tech Innovations: 2025 Trends</h3>
+        <p>Discover what's coming next in tech with our exclusive report...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="magazines">
+    <h2>Buy Premium Magazines</h2>
+    <div class="magazines">
+      <div class="magazine">
+        <h3>Business Insights - June Edition</h3>
+        <button>Buy Now</button>
+      </div>
+      <div class="magazine">
+        <h3>Global Politics - Special Issue</h3>
+        <button>Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="social-media">
+    <h2>Follow Us on Social Media</h2>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/skynews" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/skynews" target="_blank">Facebook</a>
+      <a href="https://www.linkedin.com/company/sky-news" target="_blank">LinkedIn</a>
+      <a href="https://www.tiktok.com/@skynews" target="_blank">TikTok</a>
+    </div>
+  </section>
+
+  <section id="login" class="modal">
+    <div class="modal-content">
+      <h3>Login to Sky News</h3>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <button type="submit">Login</button>
+      </form>
+      <button id="close-login">Close</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sky News | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.getElementById('login-btn').addEventListener('click', function() {
+      document.getElementById('login').style.display = 'flex';
+    });
+
+    document.getElementById('close-login').addEventListener('click', function() {
+      document.getElementById('login').style.display = 'none';
+    });
+
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // prevent form from submitting for demo purposes
+      alert('Logged in successfully!');
+      document.getElementById('login').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
