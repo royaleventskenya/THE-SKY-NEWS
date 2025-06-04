@@ -1,214 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THE SKY NEWS Mockup</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THE SKY NEWS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Reset default styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background-color: #0078D4;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header .logo {
-      font-size: 24px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    #home {
-      padding: 20px;
-      background-color: #f0f0f0;
-    }
-
-    section {
-      padding: 20px;
-      margin: 20px 0;
-    }
-
-    #blog .blog-posts, #magazines .magazines {
-      display: flex;
-      gap: 20px;
-    }
-
-    .post, .magazine {
-      background-color: #fff;
-      padding: 15px;
-      border: 1px solid #ddd;
-      width: 250px;
-    }
-
-    button {
-      background-color: #0078D4;
-      color: white;
-      padding: 10px;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #005a9c;
-    }
-
-    .social-icons a {
-      margin-right: 15px;
-      text-decoration: none;
-    }
-
-    footer {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    #login {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      width: 300px;
-    }
-
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-    }
-
-    #close-login {
-      margin-top: 10px;
-      padding: 5px 10px;
-      background-color: #ddd;
-    }
+    body { font-family: Arial, sans-serif; }
+    .hero { background: url('your-featured-image.jpg') center/cover no-repeat; color: white; padding: 80px 20px; }
+    .hero h1 { font-size: 3rem; }
+    .article-card img { max-height: 200px; object-fit: cover; }
+    .footer { background: #333; color: white; padding: 20px 0; }
+    .footer a { color: #ddd; text-decoration: none; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">THE SKY NEWS MAGAZINE  </div>
-    
-    <div class="logo"> MAGAZINE  </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#magazines">Magazines</a></li>
-        <li><a href="#login" id="login-btn">Login</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="home">
-    <h1>Welcome to THE SKY NEWS</h1>
-    <p>Your source for breaking news, in-depth articles, and premium content.</p>
-  </section>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">THE SKY NEWS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Lifestyle</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <section id="blog">
-    <h2>Latest Blog Posts</h2>
-    <div class="blog-posts">
-      <div class="post">
-        <h3>Breaking News: Major Event</h3>
-        <p>Stay updated on the latest events happening worldwide. Click to read more...</p>
-      </div>
-      <div class="post">
-        <h3>Tech Innovations: 2025 Trends</h3>
-        <p>Discover what's coming next in tech with our exclusive report...</p>
-      </div>
+  <!-- Hero section -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Featured Story Headline</h1>
+      <p class="lead">A short intro or summary of the top story goes here.</p>
+      <a href="#" class="btn btn-primary">Read More</a>
     </div>
   </section>
 
-  <section id="magazines">
-    <h2>Buy Premium Magazines</h2>
-    <div class="magazines">
-      <div class="magazine">
-        <h3>Business Insights - June Edition</h3>
-        <button>Buy Now</button>
+  <!-- Main Content -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Articles -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+          <!-- Repeat this for each article -->
+          <div class="col-md-6">
+            <div class="card article-card">
+              <img src="img1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Article Title</h5>
+                <p class="card-text">Short summary of the article...</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- End repeat -->
+        </div>
       </div>
-      <div class="magazine">
-        <h3>Global Politics - Special Issue</h3>
-        <button>Buy Now</button>
+
+      <!-- Sidebar -->
+      <div class="col-lg-4">
+        <h4>Popular Stories</h4>
+        <ul class="list-group mb-4">
+          <li class="list-group-item"><a href="#">Popular Story 1</a></li>
+          <li class="list-group-item"><a href="#">Popular Story 2</a></li>
+          <li class="list-group-item"><a href="#">Popular Story 3</a></li>
+        </ul>
+
+        <h4>Categories</h4>
+        <ul class="list-group">
+          <li class="list-group-item"><a href="#">Politics</a></li>
+          <li class="list-group-item"><a href="#">Health</a></li>
+          <li class="list-group-item"><a href="#">Business</a></li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="social-media">
-    <h2>Follow Us on Social Media</h2>
-    <div class="social-icons">
-      <a href="https://www.instagram.com/skynews" target="_blank">Instagram</a>
-      <a href="https://www.facebook.com/skynews" target="_blank">Facebook</a>
-      <a href="https://www.linkedin.com/company/sky-news" target="_blank">LinkedIn</a>
-      <a href="https://www.tiktok.com/@skynews" target="_blank">TikTok</a>
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p>© 2025 THE SKY NEWS. All Rights Reserved.</p>
+      <p>
+        <a href="#">Facebook</a> |
+        <a href="#">Twitter</a> |
+        <a href="#">Instagram</a>
+      </p>
     </div>
-  </section>
-
-  <section id="login" class="modal">
-    <div class="modal-content">
-      <h3>Login to Sky News</h3>
-      <form id="login-form">
-        <label for="username">Username:</label>
-        <input type="text" id="username" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" required>
-        <button type="submit">Login</button>
-      </form>
-      <button id="close-login">Close</button>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Sky News | All Rights Reserved</p>
   </footer>
 
-  <script>
-    document.getElementById('login-btn').addEventListener('click', function() {
-      document.getElementById('login').style.display = 'flex';
-    });
-
-    document.getElementById('close-login').addEventListener('click', function() {
-      document.getElementById('login').style.display = 'none';
-    });
-
-    document.getElementById('login-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // prevent form from submitting for demo purposes
-      alert('Logged in successfully!');
-      document.getElementById('login').style.display = 'none';
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
